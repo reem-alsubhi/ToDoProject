@@ -24,6 +24,7 @@ class ToDo {
     }
     func addItem(item: taskItem) {
         toDoList.append(item)
+       
     }
     func printByStatus(status: Status) {
         
@@ -34,7 +35,7 @@ class ToDo {
         }
     }
     
-    func printAll(){
+    func printAll() {
         
         for item in toDoList {
             print (" Title \(item.taskTitle) ,  Day \(item.day) ,   Time \(item.time) ,  Taskstatus \(item.taskStatus)")
@@ -65,7 +66,6 @@ var t1 = ToDo (toDoList: taskItem.init(taskTitle: "home work", day: "sunday", ti
 t1.addItem(item: taskItem.init(taskTitle: "go to gym", day: "monday", time: "6:00pm", taskStatus: .completed))
 t1.addItem(item: taskItem.init(taskTitle: "i sleep early", day: "monday", time: "10:00pm", taskStatus: .completed))
 t1.addItem(item: taskItem.init(taskTitle: "morining exercicses", day: "fraidy", time: "8:00am", taskStatus: .completed))
-
 t1.remove(index: 1)
 t1.updateItem(item: taskItem.init(taskTitle: "visit family", day: "monday", time: "8:00pm", taskStatus: .pending), index: 0)
 t1.printAll()
